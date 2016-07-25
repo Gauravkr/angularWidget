@@ -2,10 +2,11 @@ define([
     'jquery',
     'underscore',
     'angular',
+    'highcharts',
     'bootstrap',
     'jqueryui',
     'app/app'
-], function($, _, angular) {
+], function($, _, angular, highcharts) {
     'use strict';
 
     try {

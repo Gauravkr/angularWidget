@@ -16,12 +16,25 @@
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Choose Theme <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Dark Theme</a></li>
-                            <li><a href="#">Light Theme</a></li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Themes <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li
+                              ng-model="selectedTheme"
+                              ng-click="selected(key)"
+                              ng-repeat="(key, value) in themes">{{key}}
+                            </li>
                         </ul>
                     </li>
+                    <!--<li class="dropdown">
+                        <button
+                          class="btn btn-primary dropdown-toggle"
+                          id="theme" type="button"
+                          data-toggle="dropdown">{{selectedTheme}}
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li ng-model="selectedPeeps" ng-click="selected(theme)" ng-repeat="(key, value) in themes">{{key}}</li>
+                        </ul>
+                    </li>-->
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -33,9 +46,35 @@
         <div class="grid row-sm-12 row-md-12">
             <div ui-grid="{ data: myData }" class="myGrid"></div>
         </div>
-        <div class="grid row-sm-12 row-md-12">
-            <div class="grid row-sm-6 row-md-6">
+        <div class="row">
+            <h3>HighCharts Examples</h3>
+            <div class="col-sm-6 col-md-6">
                 <highchart id="chart1" config="chartConfig"></highchart>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <highchart id="chart2" config="lineChartConfig"></highchart>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-6">
+                <h3>DatePicker Examples</h3>
+                <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
+
+                <h4>Inline</h4>
+                <div style="display:inline-block; min-height:290px;">
+                    <div uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></div>
+                </div>
+
+                <hr />
+                <button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>
+                <button type="button" class="btn btn-sm btn-default" ng-click="setDate(2009, 7, 24)">2009-08-24</button>
+                <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
+                <button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" uib-tooltip="After today restriction">Min date</button>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <h4>Pager</h4>
+                <pre>You are currently on page {{currentPage}}</pre>
+                <ul uib-pager total-items="totalItems" ng-model="currentPage"></ul>
             </div>
         </div>
     </div>

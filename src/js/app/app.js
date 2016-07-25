@@ -6,7 +6,8 @@ define([
     'angular-ui-router',
     'angular-ui-utils',
     'angular-bootstrap',
-    'ui.grid'
+    'ui.grid',
+    'highcharts-ng'
 ], function(angular,
             homeController,
             AppConstant,
@@ -17,7 +18,8 @@ define([
     var appModule = angular.module('app', [
         'ui.router',
         'ui.bootstrap',
-        'ui.grid'
+        'ui.grid',
+        'highcharts-ng'
     ]);
 
     //configure module

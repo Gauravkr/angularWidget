@@ -41,7 +41,8 @@ require.config({
             deps: ['angular']
         },
         'highcharts': {
-            exports: 'highcharts'
+            exports: "Highcharts",
+            deps: ["jquery"]
         },
         'highcharts-ng': {
             deps: ['angular', 'highcharts']
