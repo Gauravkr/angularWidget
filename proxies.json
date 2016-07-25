@@ -1,0 +1,12 @@
+{
+    "proxies": [
+      {
+        "host": "localhost",
+        "port": 9000,
+        "context": "/autoIQ",
+        "xforward": false,
+        "changeOrigin": true,
+        "rewrite": { "^/autoIQ": "" }
+      }
+    ]
+}

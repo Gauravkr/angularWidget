@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <title>AutoIQ</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- build:style thirdParty -->
+    <!-- /build -->
+
+    <!-- build:style app -->
+    <!-- /build -->
+
+    <!-- build:remove -->
+    <link rel="stylesheet/less" type="text/css" href="less/main-third-party.less" />
+    <link rel="stylesheet/less" type="text/css" href="less/main.less" />
+    <script>
+        less = { async: true };
+    </script>
+    <script src="bower_components/less/dist/less.min.js" type="text/javascript"></script>
+    <!-- /build -->
+
+</head>
+<body class="nopadding">
+<div ui-view class="col-xs-12 autoFillHeight nopadding"></div>
+
+<!-- build:script app -->
+<!-- /build -->
+
+<!-- build:remove -->
+<script type="text/javascript" src="bower_components/requirejs/require.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript">
+    (function(require) {
+        'use strict';
+
+        require.config({
+            baseUrl: 'js'
+        });
+
+        // simulate almond require main
+        require(['main'], function() {});
+
+    }(require));
+
+</script>
+<!-- /build -->
+
+</body>
+</html>
