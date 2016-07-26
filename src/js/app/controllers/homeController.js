@@ -6,8 +6,8 @@ define([], function() {
      * Controller to deal with header view, Include logout functionality
      * @type {*[]}
      */
-    var homeController = ['$scope', 'AppConstants',
-        function ($scope, AppConstant) {
+    var homeController = ['$scope', 'AppConstants', 'alertService',
+        function ($scope, AppConstant, alertService) {
             $scope.myData =  AppConstant.users;
             $scope.chartConfig = {
                 "options":{
@@ -169,6 +169,7 @@ define([], function() {
             $scope.selected = function(theme) {
                 var themeurl = $scope.themes[theme];
                 themesheet.attr('href',themeurl);
+                alertService.addAlert('Applied Theme : " '+ theme +' "', 'info');
             };
         }];
 

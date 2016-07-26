@@ -1,6 +1,7 @@
 define([
     'angular',
     'app/controllers/homeController',
+    'app/services/alertService',
     'app/constants/appConstant',
     'app/appConfig',
     'angular-ui-router',
@@ -10,6 +11,7 @@ define([
     'highcharts-ng'
 ], function(angular,
             homeController,
+            alertService,
             AppConstant,
             appConfig) {
     'use strict';
@@ -35,7 +37,7 @@ define([
     // register services
     appModule
         .factory({
-
+            'alertService': alertService
         });
 
     //register directives
