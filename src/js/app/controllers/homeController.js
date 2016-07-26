@@ -18,6 +18,11 @@ define([], function() {
                         "series":{
                             "stacking":""
                         }
+                    },
+                    "legend": {
+                      layout: 'vertical',
+         align: 'right',
+         verticalAlign: 'top',
                     }
                 },
                 "series":[
@@ -70,14 +75,14 @@ define([], function() {
                     }
                 ],
                 "title":{
-                    "text":"AREA GRAPH"
+                    "text":""
                 },
-                "credits":{
-                    "enabled":true
-                },
+                // "credits":{
+                //     "enabled":true
+                // },
                 "loading":false,
                 "size":{
-
+                  "height":"200"
                 }
             };
             $scope.lineChartConfig = {
