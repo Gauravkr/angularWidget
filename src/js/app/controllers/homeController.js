@@ -158,7 +158,7 @@ define([], function() {
                 "default": "//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css",
                 //"amelia" : "//bootswatch.com/amelia/bootstrap.min.css",
                 "cerulean" : "//bootswatch.com/cerulean/bootstrap.min.css",
-                "cosmo" : "//bootswatch.com/cosmo/bootstrap.min.css",
+                // "cosmo" : "//bootswatch.com/cosmo/bootstrap.min.css",
                 // "cyborg" : "//bootswatch.com/cyborg/bootstrap.min.css",
                 // "flatly" : "//bootswatch.com/flatly/bootstrap.min.css",
                 // "journal" : "//bootswatch.com/journal/bootstrap.min.css",
